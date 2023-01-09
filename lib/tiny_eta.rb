@@ -18,11 +18,15 @@ module TinyEta
   # elapsed: the number of seconds elapsed (Integer or Float)
   # percent_complete: 0.0..1.0 - the percent completion (Float)
   def self.eta(elapsed, percent_complete)
+    return "?d ??:??:??" if percent_complete == 0
+
     percent_remaining = (1.0 - percent_complete)
     remaining_time = ((elapsed / percent_complete) * percent_remaining).round
     puts remaining_time
 
     days = (remaining_time / SECONDS_PER_DAY.to_f).to_i
+    return "?d ??:??:??" if days > 999
+
     remaining_time -= days * SECONDS_PER_DAY
 
     hours = (remaining_time / SECONDS_PER_HOUR.to_f).to_i
