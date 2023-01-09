@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = "tiny_eta"
-  s.version     = "1.0.1"
+  s.version     = "1.0.2"
   s.description = "a quick way to get a human-friendly ETA for a task"
   s.summary     = "want to know approximately how long something will take to complete, and nothing else? then this library is for you"
   s.authors     = ["Jeff Lunt"]

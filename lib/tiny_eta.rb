@@ -22,7 +22,6 @@ module TinyEta
 
     percent_remaining = (1.0 - percent_complete)
     remaining_time = ((elapsed / percent_complete) * percent_remaining).round
-    puts remaining_time
 
     days = (remaining_time / SECONDS_PER_DAY.to_f).to_i
     return "?d ??:??:??" if days > 999
